@@ -1,0 +1,252 @@
+:root {
+  --white: 0, 0%, 100%;
+  --darkblue: hsl(233, 54%, 16%);
+  --bluegray: hsl(234, 25%, 52%);
+  --gray: hsl(232, 10%, 56%);
+  --whitegray: 236, 100%, 97%;
+  --lightpink: hsl(341, 100%, 83%);
+  --pink: hsl(341, 92%, 62%);
+  --darkpink: 322, 87%, 55%;
+  --orange: 13, 100%, 64%;
+  --blue: 237, 100%, 64%;
+
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding-bottom: 1.6rem;
+  line-height: 3.2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: hsl(var(--white));
+}
+
+h3 {
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+footer {
+  padding: 2.5rem 1rem;
+  background-color: var(--darkblue);
+}
+
+footer button {
+  border: none;
+  border-radius: 1.75rem;
+  padding: 0.5rem 1.5rem;
+  color: hsl(var(--white));
+  font-weight: 800;
+  background-image: linear-gradient(hsl(var(--blue)), hsl(var(--darkpink)));
+
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.heading,
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  padding: 2rem 1rem 0 1rem;
+}
+
+.heading button {
+  padding: 0.75rem 1.5rem;
+  color: hsl(var(--white));
+  background-color: var(--darkblue);
+  border: none;
+  border-radius: 1.75rem;
+}
+
+.logo {
+  max-height: 2rem;
+  max-width: 5.5rem;
+}
+
+.hero {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.hero p {
+  line-height: 1.6rem;
+  padding-bottom: 1.5rem;
+}
+
+.hero button {
+  padding: 0.9rem 2.3rem;
+  border: none;
+  border-radius: 2rem;
+  color: hsl(var(--white));
+}
+
+.hero p,
+.card p {
+  color: var(--gray);
+}
+
+#hero-image {
+  margin: 0 auto;
+}
+
+main {
+  background: linear-gradient(180deg, hsl(var(--white)) 0%, hsl(var(--whitegray)) 100%);
+  display:flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 1rem 2rem 2rem;
+  margin: 0 auto 2.5rem auto;
+  width: max(90%, 21.5rem);
+  border-radius: 0.6rem;
+  background-color: hsl(var(--white));
+}
+
+.card img {
+  max-width: 3.4rem;
+  max-height: 3.4rem;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  max-width: 40%;
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 0;
+  color: var(--pink);
+  font-weight: 800;
+}
+
+.hero button,
+.highlight {
+  background-image: linear-gradient(hsl(var(--orange)), hsl(var(--darkpink)));
+}
+
+.highlight {
+  padding: 3.75rem 0.75rem;
+  border-radius: 0.6rem;
+  text-align: left;
+}
+
+.highlight h2 {
+  padding: 1rem;
+}
+
+@media screen and (min-width:768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    max-width: 25rem;
+    padding-right: 2rem;
+  }
+
+  .heading {
+    margin: 0 1rem;
+  }
+
+  .hero {
+    display: flex;
+    max-width: 40rem;
+    margin: 6.22rem 2.5rem;
+    /* flex-direction:row; */
+  }
+
+  .hero p {
+    max-width: 25rem;
+  }
+
+  #hero-image {
+    content: url('assets/image-hero-tablet.webp');
+    position: absolute;
+    top: -4rem;
+    right: -20rem;
+    max-width: 90%;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+  .highlight {
+    margin: 2.25rem 1.25rem 0 1.25rem;
+    max-height: 16.2rem;
+  }
+
+
+  footer {
+    padding: 2.5rem;
+  }
+
+}
+
+@media screen and (min-width:1440px) {
+  #hero-image {
+    content: url('assets/image-hero-desktop.webp');
+    position: absolute;
+    top: -10rem;
+    right: -20rem;
+    max-width: 90%;
+  }
+
+  .heading {
+    margin: 0 10.3rem;
+  }
+
+  .heading-text {
+    margin-top: 3rem;
+    margin-left: 7.5rem;
+  }
+
+  main {
+    margin: 18rem auto 0 auto;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .column {
+    flex-direction: column;
+    /* display: inline-block; */
+      flex-grow: 1;
+      flex-basis: calc(100% / 3);
+  }
+
+  .card {
+    max-width: 22rem;
+    height: 21rem;
+    margin: 2rem;
+  }
+}
